@@ -4,7 +4,7 @@ const DOMitems = document.querySelector('.slidebar-right__content');
 
 function renderizarProductos(baseDeDatos, category, text) {
   DOMitems.innerHTML = "";
-  $(".page-number").removeClass("hola");
+  $(".page-number").removeClass("bg-green");
   // filtrar productos por categoria
   if (category !== false) {
 
@@ -51,7 +51,7 @@ function nbd(baseDeDatos, productosPorPagina) {
   pagination.innerHTML = "";
 
   for (var i = 1; i <= pageCont; i++) {
-    pagination.innerHTML += '<li ><a href = "#" name = "popo" class = "page-number">' + i + '</a></li>';
+    pagination.innerHTML += '<li ><a href = "#" class = "page-number">' + i + '</a></li>';
   }
 
   document.getElementById('category-number').innerHTML = `Productos encontrados: (${baseDeDatos.length})`
@@ -83,10 +83,10 @@ function productosMostrados(baseDeDatos, numero, productosPorPagina) {
   var r = numero - 1
   var page_focus = document.querySelectorAll(".page-number");
   page_focus.forEach(p_n => {
-    p_n.classList.remove("hola");
+    p_n.classList.remove("bg-green");
   });
 
-  page_focus[r].classList.add("hola");
+  page_focus[r].classList.add("bg-green");
   baseDeDatos = baseDeDatos.slice((numero - 1) * productosPorPagina, numero * productosPorPagina);
 
   showDbContent(baseDeDatos);
