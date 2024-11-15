@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/wiltronic-FAVICON.png"
+      type="image/x-icon"
+    />
+    <script
+      crossorigin="anonymous"
+      src="https://kit.fontawesome.com/4bd5dc1942.js"
+    ></script>
+    <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header"></header>
+
+    <main>
+      <div class="products-zoom__container" id="myModal">
+        <div id="products-zoom"></div>
+      </div>
+      <div class="slidebars-container">
+        <div class="slidebar-left">
+          <div class="slidebar-left__content">
+            <h2 id="slidebarl_more">
+              CATEGORIAS<i class="fas fa-angle-down"></i>
+            </h2>
+            <ul id="list_1">
+              <li class="submenu-cat">
+                <a href="#"
+                  ><i class="fas fa-microchip"></i>Electrónica<i
+                    class="fas fa-angle-down"
+                  ></i
+                ></a>
+                <ul class="children-cat">
+                  <li>
+                    <a class="p-busqueda" href="#"
+                      ><i class="fas fa-assistive-listening-systems"></i
+                      >Sensores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="p-busqueda" href="#"
+                      ><i class="fas fa-microchip"></i>Arduinos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="p-busqueda" href="#"
+                      ><i class="fas fa-upload"></i>Programadores MC</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a class="p-busqueda" href="#"
+                  ><i class="fas fa-tools c-menu-icons"></i>Herramientas</a
+                >
+              </li>
+              <li>
+                <a class="p-busqueda" href="#"
+                  ><i class="fas fa-helicopter"></i>Drones</a
+                >
+              </li>
+              <li>
+                <a class="p-busqueda" href="#"
+                  ><i class="fas fa-robot c-menu-icons"></i>Robots armables</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slidebar-right">
+          <div class="category-search">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Buscar productos."
+              id="search_i"
+            /><span id="search-icon" class="fas fa-search"></span>
+          </div>
+          <div class="category-name-number">
+            <span id="category-name"></span>
+            <h2 id="category-number"></h2>
+          </div>
+          <div class="pagination-container top-1">
+            <p id="numero-pagina"></p>
+          </div>
+          <div class="slidebar-right__content"></div>
+
+          <div class="pagination-container">
+            <ul id="pagination"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+    <script
+      crossorigin="anonymous"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script type="module" src="./products.js"></script>
+  </body>
+</html>

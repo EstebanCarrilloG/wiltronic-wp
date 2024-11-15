@@ -1,10 +1,14 @@
-import { mHamburger } from "./components/hamburguer.js";
-import { ScrollAnims } from "./components/scrollAnimations.js";
-import { CatAnimations } from "./helpers/categoryDropDownAnimations.js"
+import { mHamburger } from "./scripts/hamburguer.js";
+import { ScrollAnims } from "./scripts/scrollAnimations.js";
+import { CatAnimations } from "./helpers/categoryDropDownAnimations.js";
+import footer from "./components/footer.js";
+import { header } from "./components/header.js";
+import { indexPageLinks } from "./data/headerLinks.js";
 
 $(document).ready(function () {
-    mHamburger();
-    ScrollAnims();
-    CatAnimations($('.submenu'), 'ul.children');
-})
-
+  $(".header").html(header(indexPageLinks, true));
+  mHamburger();
+  ScrollAnims();
+  CatAnimations($(".submenu"), "ul.children");
+  $("#footer").html(footer());
+});
