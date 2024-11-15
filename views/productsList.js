@@ -103,7 +103,7 @@ function showDbContent(baseDeDatos) {
     const texto_divs = `
     <div class = "product-imgAndPrice-title">
       <div class ="product-img">
-        <img src="${info.imagen}" alt="">
+        <img src="../${info.imagen}" alt="">
           <div class= "product-price">
             <span class= "product-price-before">$${info.precio}</span>
             <span class= "product-price-dicount">$${info.precioDescuento}</span>

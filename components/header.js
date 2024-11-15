@@ -7,7 +7,7 @@ export function header(links, isIndexpage) {
           <a href="${isIndexpage ? "./" : "../"}"
             ><img
               class="logo__img"
-              src="/assets/wiltronic-logo - copia.png"
+              src="${isIndexpage? "./" : "../"}assets/wiltronic-logo - copia.png"
               alt=""
           /></a>
         </div>
