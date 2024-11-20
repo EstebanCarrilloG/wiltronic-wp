@@ -32,17 +32,6 @@ El objetivo principal de **Wiltronic-WP** fue aprender y practicar:
 4. **Consulta de datos desde Excel**:
    - Lectura y uso de información almacenada en un archivo de Excel para alimentar el contenido dinámico.
 
-## 📂 Estructura del proyecto
-
-```plaintext
-Wiltronic-WP/
-├── index.html        # Página principal del proyecto.
-├── styles.css        # Archivo CSS para los estilos.
-├── scripts.js        # Lógica de interacción y manejo de objetos.
-├── data.xlsx         # Archivo de Excel utilizado como base de datos.
-└── assets/           # Carpeta para imágenes y otros recursos.
-```
-
 ## 📖 Aprendizajes clave
 
 A través de este proyecto, adquirí experiencia en:
@@ -55,17 +44,3 @@ A través de este proyecto, adquirí experiencia en:
 ## 🌐 Demo del proyecto
 
 Puedes ver el proyecto en acción aquí: [Wiltronic-WP](https://estebancarrillog.github.io/wiltronic-wp)
-
-## 🛠️ Mejoras futuras
-
-- Migrar la base de datos de Excel a una solución más robusta, como una base de datos en la nube.
-- Optimizar las animaciones para mejorar el rendimiento en dispositivos móviles.
-- Actualizar el código para utilizar frameworks modernos como **React** o **Next.js**.
-
-## 📩 Contacto
-
-Si tienes preguntas o sugerencias, no dudes en contactarme:  
-**Esteban Carrillo**  
-[LinkedIn](https://www.linkedin.com/in/estebanc96/) | [Portafolio](https://estebancarrillo.edeptec.com/)  
-
-¡Espero que encuentres útil este proyecto y te inspire en tu propio aprendizaje!
