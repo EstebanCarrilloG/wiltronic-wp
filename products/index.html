@@ -16,7 +16,6 @@
       crossorigin="anonymous"
       src="https://kit.fontawesome.com/4bd5dc1942.js"
     ></script>
-    <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
   </head>
 
   <body>
@@ -41,18 +40,18 @@
                 ></a>
                 <ul class="children-cat">
                   <li>
-                    <a class="p-busqueda" href="#"
+                    <a class="p-busqueda" href="#" data-tag="Sensores"
                       ><i class="fas fa-assistive-listening-systems"></i
                       >Sensores</a
                     >
                   </li>
                   <li>
-                    <a class="p-busqueda" href="#"
+                    <a class="p-busqueda" href="#" data-tag="Arduinos"
                       ><i class="fas fa-microchip"></i>Arduinos</a
                     >
                   </li>
                   <li>
-                    <a class="p-busqueda" href="#"
+                    <a class="p-busqueda" href="#" data-tag="Programadores MC"
                       ><i class="fas fa-upload"></i>Programadores MC</a
                     >
                   </li>
@@ -60,17 +59,17 @@
               </li>
 
               <li>
-                <a class="p-busqueda" href="#"
+                <a class="p-busqueda" href="#" data-tag="Herramientas"
                   ><i class="fas fa-tools c-menu-icons"></i>Herramientas</a
                 >
               </li>
               <li>
-                <a class="p-busqueda" href="#"
+                <a class="p-busqueda" href="#" data-tag="Drones"
                   ><i class="fas fa-helicopter"></i>Drones</a
                 >
               </li>
               <li>
-                <a class="p-busqueda" href="#"
+                <a class="p-busqueda" href="#" data-tag="Robots armables"
                   ><i class="fas fa-robot c-menu-icons"></i>Robots armables</a
                 >
               </li>
@@ -86,17 +85,19 @@
               id="search_i"
             /><span id="search-icon" class="fas fa-search"></span>
           </div>
-          <div class="category-name-number">
-            <span id="category-name"></span>
-            <h2 id="category-number"></h2>
-          </div>
-          <div class="pagination-container top-1">
-            <p id="numero-pagina"></p>
-          </div>
-          <div class="slidebar-right__content"></div>
+          <div id="products-info-container">
+            <div class="category-name-number">
+              <span id="category-name"></span>
+              <h2 id="category-number"></h2>
+            </div>
+            <div class="pagination-container top-1">
+              <p id="numero-pagina"></p>
+            </div>
+            <div class="slidebar-right__content"></div>
 
-          <div class="pagination-container">
-            <ul id="pagination"></ul>
+            <div class="pagination-container">
+              <ul id="pagination"></ul>
+            </div>
           </div>
         </div>
       </div>

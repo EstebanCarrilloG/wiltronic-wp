@@ -1,13 +1,11 @@
 /* set up XMLHttpRequest */
-
-import { DbFiltering } from "./dbFiltering.js";
+import  XLSX  from "../dist/xlsx.full.min.js"
 
 
 export function ExelToHtml() {
 
 
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwyysWVKkiCRPBzxmOXzjvoCeYYciP5-4CjSahK0NfLcOnkdI4Avkpx4DLFW-K8yf6y3y9kyvn9sP0/pubhtml?gid=0&single=true";
-
   var oReq = new XMLHttpRequest();
   oReq.open("GET", url, true);
   oReq.responseType = "arraybuffer";
@@ -32,7 +30,7 @@ export function ExelToHtml() {
     var baseDeDatos = XLSX.utils.sheet_to_json(worksheet);
     Object.freeze(baseDeDatos);
 
-    DbFiltering(baseDeDatos);
+    localStorage.setItem("db", JSON.stringify(baseDeDatos));
 
   }
 
