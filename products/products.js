@@ -11,7 +11,7 @@ $(document).ready( function () {
   $(".header").html(header(productsPageLinks, false));
   mHamburger();
   CatMenu($("#slidebarl_more"), $("#list_1"));
-  CatAnimations($(".submenu-cat"), "ul.children-cat");
+  CatAnimations($(".submenu-cat .cat-dropdown-menu"));
   ExelToHtml();
   // timeout para que se carguen los productos
   setTimeout(() => {

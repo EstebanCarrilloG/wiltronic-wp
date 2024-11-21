@@ -1,5 +1,5 @@
-export function CatAnimations(target, element) {
+export function CatAnimations(target) {
   target.click(function () {
-    $(this).children(element).slideToggle();
+    $(this.nextElementSibling).slideToggle();
   });
 }

@@ -1,35 +1,29 @@
 import { showHideMenu } from "../helpers/productsDropDownAnimation.js";
-import { renderizarProductos } from "../views/productsList.js";
+import { filterProducts } from "./filterProducts.js";
+import renderProducts from "./renderProducts.js";
 
 export function filteringModes() {
-
   let defaultTag = "Popular";
   const searchCategory = $(".p-busqueda");
   const input = $("#search_i");
-
   //input.on("keyup", buscarDb);
 
   input.on("keydown", function (e) {
     if (e.keyCode === 13) {
-      buscarDb($(this).val());
+      buscarDb($(this).val().toLowerCase());
     }
   });
 
   function buscarDb(text) {
-    text = text.toLowerCase();
-    if (text == " " || text == "") {
-      renderizarProductos(defaultTag, false);
-    } else {
-      renderizarProductos(false, text);
-    }
+    if (text !== " " || text !== "")
+      renderProducts(filterProducts(false, text), text);
   }
 
-  searchCategory.each(function () {
-    $(this).on("click", function () {
-      showHideMenu($("#list_1"));
-      renderizarProductos($(this).attr("data-tag"), false);
-    });
+  searchCategory.on("click", function () {
+    showHideMenu($("#list_1"));
+    let dataTag = $(this).attr("data-tag");
+    renderProducts(filterProducts(dataTag, false), dataTag);
   });
 
-  renderizarProductos(defaultTag, false);
+  renderProducts(filterProducts(defaultTag, false), defaultTag);
 }
