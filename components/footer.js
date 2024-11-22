@@ -1,4 +1,16 @@
-export default function footer() {
+
+/**
+ * Generates the HTML structure for the footer section of the webpage.
+ * The footer includes three main sections: quick links, social media links, and copyright information.
+ * 
+ * Sections:
+ * - Quick Links: Contains links to various pages such as Inicio, Cookies, and Reportar error.
+ * - Social Media: Provides links to social media platforms like Facebook, Instagram, and WhatsApp.
+ * - Copyright: Displays the creator's information and the copyright statement.
+ * 
+ * @returns {string} The HTML string for the footer section.
+ */
+export default function footer() { 
   return `
       <div class="footer-container container">
         <div class="footer-links">

@@ -1,3 +1,9 @@
+/**
+ * @description Creates the header for the given page.
+ * @param {object} links - The links to render in the header.
+ * @param {boolean} isIndexpage - If the page is the index page.
+ * @returns {string} The rendered header as a string.
+ */
 export function header(links, isIndexpage) {
   console.log(Object.keys(links));
   return `<div class="header-container ${

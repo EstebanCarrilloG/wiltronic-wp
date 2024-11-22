@@ -1,12 +1,26 @@
-export function ScrollAnims() {
+/**
+ * Adds animation effects to different sections of the page when the user scrolls to their positions.
+ *
+ * The sections are:
+ * - #about
+ * - #products
+ * - #services
+ * - #contact
+ *
+ * The effects are:
+ * - Adding a background color to the header and navigation bar when the user scrolls down a bit.
+ * - Adding a class to each section when the user scrolls down to it, and removing the class when the user scrolls up from it.
+ */
+export function scrollAnimations() {
   const $about = $("#about"),
     $products = $("#products"),
     $services = $("#services"),
-    $contact = $("#contact");
+    $contact = $("#contact"),
+    $cabecera = $("#header"),
+    $nav = $("#nav");
 
-  var $cabecera = $("#header");
-  var $nav = $("#nav");
-  var previousScroll = 0;
+  let previousScroll = 0;
+  
   $(window).scroll(function (event) {
     var scroll = $(this).scrollTop();
 

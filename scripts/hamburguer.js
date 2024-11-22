@@ -1,6 +1,13 @@
 
-export function mHamburger() {
-    var contador = 0;
+/**
+ * Initializes animations for a hamburger menu.
+ * 
+ * - Toggles the 'active' class on the hamburger element when clicked.
+ * - Animates the navigation menu sliding in and out from the left based on a counter.
+ * - Resets the counter and hides the menu when a link inside the navigation is clicked.
+ */
+export function hamburgerMenuAnimations() {
+    var counter = 0;
     const hamburger = document.querySelector(".hamburger");
 
     $('.hamburger').click(function () {
@@ -9,7 +16,7 @@ export function mHamburger() {
 
     function showHideHamnuerger() {
         hamburger.classList.toggle("active");
-        if (contador %= 2) {
+        if (counter %= 2) {
             $('nav').animate({
                 left: '-100%'
             });
@@ -18,7 +25,7 @@ export function mHamburger() {
                 left: '0'
             });
         }
-        contador++;
+        counter++;
     }
 
     // Mostramos y ocultamos submenus
@@ -27,7 +34,7 @@ export function mHamburger() {
     }); */
 
     $('body').on('click', 'nav a', function(){
-       contador = 1;
+       counter = 1;
        showHideHamnuerger();
    })
 }

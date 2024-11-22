@@ -1,6 +1,6 @@
 var contador1 = 1;
 
-function CatMenu(target, element) {
+function menuAnimations(target, element) {
   target.click(function () {
     showHideMenu(element);
   });
@@ -21,4 +21,4 @@ function showHideMenu(element) {
   contador1++;
 }
 
-export { CatMenu, showHideMenu };
+export { menuAnimations, showHideMenu };

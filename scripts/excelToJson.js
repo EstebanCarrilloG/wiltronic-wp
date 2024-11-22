@@ -2,10 +2,16 @@
 import  XLSX  from "../dist/xlsx.full.min.js"
 
 
-export function ExelToHtml() {
+
+/**
+ * ExcelToJson function, responsible of getting an excel file and convert it into a json object, which is stored in localstorage.
+ * @function
+ * @returns {undefined} 
+ */
+export function excelToJson() {
 
 
-  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwyysWVKkiCRPBzxmOXzjvoCeYYciP5-4CjSahK0NfLcOnkdI4Avkpx4DLFW-K8yf6y3y9kyvn9sP0/pubhtml?gid=0&single=true";
+  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwyysWVKkiCRPBzxmOXzjvoCeYYciP5-4CjSahK0NfLcOnkdI4Avkpx4DLFW-K8yf6y3y9kyvn9sP0/pubhtml?gid=0&single=true"; // excel file url 
   var oReq = new XMLHttpRequest();
   oReq.open("GET", url, true);
   oReq.responseType = "arraybuffer";
@@ -27,10 +33,10 @@ export function ExelToHtml() {
     /* Get worksheet */
     var worksheet = workbook.Sheets[first_sheet_name];
 
-    var baseDeDatos = XLSX.utils.sheet_to_json(worksheet);
-    Object.freeze(baseDeDatos);
+    var db = XLSX.utils.sheet_to_json(worksheet);
+    Object.freeze(db);
 
-    localStorage.setItem("db", JSON.stringify(baseDeDatos));
+    localStorage.setItem("db", JSON.stringify(db)); // store data in local storage
 
   }
 

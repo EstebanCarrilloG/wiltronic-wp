@@ -1,7 +1,2 @@
-export default function pagination(length) {
-    let productosPorPagina = 6; 
-    let numeroTotalDeProductos = length;
-    let pageCont = Math.ceil(numeroTotalDeProductos / productosPorPagina);
-
-    return pageCont
-  }
+const pagination = (length, productosPorPagina) => Math.ceil(length / productosPorPagina)
+export default pagination
